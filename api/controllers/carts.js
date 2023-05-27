@@ -7,9 +7,9 @@ const Queries = require("../database/queries");
 exports.postCart = async (req, res, next) => {
   try {
     const data = {
-      userId: req.user.userId,
       cartItems: req.body.cartItems,
       createdAt: getDate(),
+      userId: req.user.userId,
       updatedAt: getDate(),
     };
 
